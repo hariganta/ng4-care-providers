@@ -18,5 +18,10 @@
     <span class="text-danger pull-left small" *ngIf="age.errors?.required && age.touched">Age is required.</span>
     <div class="clearfix"></div>
   </div>
+
+  <div class="form-group">
+    <label class="control-label pull-left">Upload Picture:</label>
+    <input type="file" class="form-control" name="pic" (change)="onChange($event)" #pic="ngModel" ngModel>
+  </div>
   <button type="submit" class="btn btn-block btn-danger" [disabled]="f.invalid">Create User</button>
 </form>
