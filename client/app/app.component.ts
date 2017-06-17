@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
+/**
+ * @author: Shoukath Mohammed
+ */
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,7 +14,7 @@ export class AppComponent {
   private title: String = 'App Works!';
 
   constructor(public translate: TranslateService) {
-       // this language will be used as a fallback 
+       // this language will be used as a fallback
        // when a translation isn't found in the current language
        translate.setDefaultLang('en');
 
