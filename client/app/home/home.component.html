@@ -1,4 +1,4 @@
-<h3>{{title}}</h3>
+<!--<h3>{{title}}</h3>
 <form class="form-horizontol" #f="ngForm" (ngSubmit)="onCreateUser(f.value)" novalidate>
   <div class="form-group" [ngClass]="{'has-error': fname.errors?.required && fname.touched}">
     <label class="control-label pull-left">{{ 'labels.fname' | translate}}</label>
@@ -24,4 +24,6 @@
     <input type="file" class="form-control" name="pic" (change)="onChange($event)" #pic="ngModel" ngModel>
   </div>
   <button type="submit" class="btn btn-block btn-danger" [disabled]="f.invalid">Create User</button>
-</form>
+</form>-->
+
+<app-register></app-register>
