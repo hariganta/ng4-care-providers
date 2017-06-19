@@ -10,6 +10,7 @@ import {
   , MdSelectModule
   , MdButtonModule
   , MdCheckboxModule
+  , MdNativeDateModule
   , MdDatepickerModule
 
 } from '@angular/material';
@@ -22,6 +23,7 @@ const MODULES: any[] = [
     MdSelectModule,
     MdButtonModule,
     MdCheckboxModule,
+    MdNativeDateModule,
     MdDatepickerModule,
     BrowserAnimationsModule
 ];

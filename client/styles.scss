@@ -5,6 +5,42 @@ body {
     //background: #ccc !important;
 }
 
+.wizard-steps {
+    display: block !important;
+}
+
+// customized buttons
+.cp-btn-circle {
+    @extend .btn !optional;
+    padding: 25px 8px;
+    border-radius: 100px;
+    border: 1px solid transparent;
+}
+
+.cp-btn-circle:hover,
+.cp-btn-circle:focus,
+.cp-btn-circle.active.focus,
+.cp-btn-circle.active:focus,
+.cp-btn-circle.active:hover,
+.cp-btn-circle:active.focus,
+.cp-btn-circle:active:focus,
+.cp-btn-circle:active:hover {
+    color: #333;
+    background-color: #d4d4d4;
+    border-color: #8c8c8c;
+    background-image: none;
+    outline: 0;
+    //outline: 5px auto -webkit-focus-ring-color;
+    //outline-offset: -2px;
+}
+
+.cp-btn-circle-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    @extend .cp-btn-circle;
+}
+
 .mat-radio-label {
     float: left !important;
 }
@@ -25,6 +61,12 @@ body {
     font-weight: normal;
 }
 
+.mat-select {
+    display: block !important;
+    position: relative;
+    top: 5px;
+}
+
 // global styles
 .cp-separator {
     padding-bottom: 10px;
@@ -34,4 +76,8 @@ body {
 .cp-form-group-spacer {
     padding-top: 25px;
     padding-bottom: 25px;
+}
+
+.cp-no-margin {
+    margin: 0 !important;
 }
