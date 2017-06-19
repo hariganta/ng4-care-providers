@@ -3,20 +3,31 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {
-    MdButtonModule
+    MdCardModule
+  , MdTabsModule
+  , MdRadioModule
+  , MdInputModule
+  , MdSelectModule
+  , MdButtonModule
   , MdCheckboxModule
-  , MdCardModule
+  , MdDatepickerModule
+
 } from '@angular/material';
 
-const modules: any[] = [
+const MODULES: any[] = [
     MdCardModule,
+    MdTabsModule,
+    MdRadioModule,
+    MdInputModule,
+    MdSelectModule,
     MdButtonModule,
     MdCheckboxModule,
+    MdDatepickerModule,
     BrowserAnimationsModule
 ];
 
 @NgModule({
-  imports: [...modules],
-  exports: [...modules]
+  imports: [...MODULES],
+  exports: [...MODULES]
 })
 export class MaterialDesigModule { }

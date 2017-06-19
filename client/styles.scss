@@ -1,3 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+body {
+    //background: #ccc !important;
+}
+
+.mat-radio-label {
+    float: left !important;
+}
+
+.mat-radio-button {
+    .mat-radio-label-content {
+        .control-label {
+            font-weight: normal;
+        }
+    }
+}
+
+.mat-input-container {
+    width: 100%;
+}
+
+.mat-input-placeholder {
+    font-weight: normal;
+}
+
+// global styles
+.cp-separator {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(221, 221, 221, 0.53);
+}
+
+.cp-form-group-spacer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
