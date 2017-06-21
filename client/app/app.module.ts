@@ -6,6 +6,7 @@ import { WizardModule } from 'ng2-archwizard';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { I18nModule } from './shared/i18n/i18n.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { MaterialDesigModule } from './shared/material-design/material-design.module';
 
@@ -39,6 +40,7 @@ import { APP_ROUTES } from './app.routes';
     BrowserModule,
     TranslateModule,
     MaterialDesigModule,
+    NgbModule.forRoot(),
     RouterModule.forRoot(APP_ROUTES)
   ],
   providers: [],

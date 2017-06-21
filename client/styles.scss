@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import 'bs-old/bootstrap';
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 body {
     //background: #ccc !important;
@@ -12,7 +13,7 @@ body {
 // customized buttons
 .cp-btn-circle {
     @extend .btn !optional;
-    padding: 13px 18px;
+    padding: 12px 18px;
     border-radius: 100px;
     border: 1px solid transparent;
 }
@@ -67,10 +68,30 @@ body {
     top: 5px;
 }
 
+// tooltips
+.tooltip.show {
+    opacity: 1;
+}
+
+.tooltip-inner {
+    padding: 5px 12px;
+    background-color: rgb(20, 144, 97);
+}
+
+.tooltip.bs-tether-element-attached-bottom 
+.tooltip-inner::before, 
+.tooltip.tooltip-top .tooltip-inner::before {
+    border-top-color: rgb(20, 144, 97);
+}
+
 // global styles
 .cp-separator {
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(221, 221, 221, 0.53);
+}
+
+.cp-bold {
+    font-weight: bold;
 }
 
 .cp-form-group-spacer {
@@ -80,4 +101,17 @@ body {
 
 .cp-no-margin {
     margin: 0 !important;
+}
+
+.cp-center {
+    margin: 0 auto;
+}
+
+.cp-overflow-hidden {
+    overflow: hidden;
+}
+
+.cp-wiz-tooltip * {
+    display: inline-block;
+    white-space: nowrap !important;
 }
