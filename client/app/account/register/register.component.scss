@@ -2,26 +2,12 @@ body {
   background: rgba(221, 221, 221, 0.34) !important;
 }
 
-.example-radio-group {
-  display: inline-flex;
-  flex-direction: column;
-}
-
-.example-radio-button {
-  margin: 5px;
-}
-
-.example-selected-value {
-  margin: 15px 0;
-}
-
 .cp-wizard-inner {
   float: none;
   margin: 0 auto;
 }
 
 .cp-panel-full {
-  //min-height: 500px;
   max-height: auto;
   border-radius: 0;
   box-shadow: 0 2px 2px rgba(0, 0, 0, .24), 0 0 2px rgba(0, 0, 0, .12);
@@ -36,42 +22,44 @@ body {
   }
 }
 
-.choice input[type="radio"], .choice input[type="checkbox"] {
-  position: absolute;
-  left: -10000px;
-  z-index: -1;
-}
-
 .choice, .choice .icon {
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
 }
 
-.choice .icon {
-  height: 116px;
-  width: 116px;
-  border-radius: 50%;
-  color: #000;
-  margin: 0 auto 20px;
-  border: 6px solid #CCCCCC;
-  transition: all 0.2s;
-  -webkit-transition: all 0.2s;
-}
-
-.choice:hover .cp-account-icon, .choice.active .icon {
-  color: rgb(20, 144, 97);
-  border-color: rgb(20, 144, 97);
-}
-
-.choice:hover .cp-account-icon, .choice:hover .icon {
-  color: #ff9500;
-  border-color: #ff9500;
-}
-
-.choice .cp-account-icon {
-  font-size: 30px;
-  line-height: 111px;
+.choice {
+  input[type='radio'], input[type='checkbox'] {
+    position: absolute;
+    left: -10000px;
+    z-index: -1;
+  }
+  .icon {
+    height: 116px;
+    width: 116px;
+    border-radius: 50%;
+    color: #000;
+    margin: 0 auto 20px;
+    border: 6px solid #CCCCCC;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+  }
+  .cp-account-icon {
+    font-size: 30px;
+    line-height: 111px;
+  }
+  &.active {
+    .icon {
+      color: rgb(20, 144, 97);
+      border-color: rgb(20, 144, 97);
+    }
+  }
+  &:hover {
+    .icon {
+      color: #ff9500;
+      border-color: #ff9500;
+    }
+  }
 }
 
 .cp-wizard-top {
@@ -89,10 +77,10 @@ body {
         }
       }
       li.current {
-          &:after {
-            color: white !important;
-            background-color: #ff9e26 !important;
-          }
+        &:after {
+          color: #fff !important;
+          background-color: #ff9e26 !important;
+        }
       }
       li.default, li.current {
         &:before {
