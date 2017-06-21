@@ -65,6 +65,11 @@
     top: 5px;
 }
 
+.mat-fab, .mat-mini-fab {
+    color: rgba(0,0,0,.87);
+    background-color: #fff;
+}
+
 // tooltips
 .tooltip.show {
     opacity: 1;
