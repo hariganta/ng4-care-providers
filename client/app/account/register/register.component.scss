@@ -1,3 +1,8 @@
+@mixin wizard-steps($color) {
+  border: 2px solid $color;
+  background-color: $color !important;
+}
+
 body {
   background: rgba(221, 221, 221, 0.34) !important;
 }
@@ -82,20 +87,23 @@ body {
           background-color: #ff9e26 !important;
         }
       }
-      li.default, li.current {
+      li.editing, li.default, li.current {
         &:before {
           border-color: #d2d2d2;
         }
       }
-      li.done, li.editing {
-        &:before {
-          border-color: rgb(20, 144, 97);
-          background-color: rgb(20, 144, 97) !important;
-        }
+      li.done {
         &:after {
-          border: 2px solid rgb(20, 144, 97);
-          background-color: rgb(20, 144, 97) !important;
           color: #fff !important;
+        }
+        &:before, &:after {
+          @include wizard-steps(rgb(20, 144, 97));
+        }
+      }
+      li.editing {
+        &:after {
+          color: #fff !important;
+          @include wizard-steps(rgb(20, 144, 97));
         }
       }
     }
