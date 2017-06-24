@@ -1,33 +1,121 @@
-.example-radio-group {
-    display: inline-flex;
-    flex-direction: column;
+@mixin wizard-steps($color) {
+  border: 2px solid $color;
+  background-color: $color !important;
 }
 
-.example-radio-button {
-    margin: 5px;
-}
-
-.example-selected-value {
-    margin: 15px 0;
+body {
+  background: rgba(221, 221, 221, 0.34) !important;
 }
 
 .cp-wizard-inner {
-    float: none;
-    margin: 0 auto;
+  float: none;
+  margin: 0 auto;
 }
 
 .cp-panel-full {
-    min-height: 500px;
-    max-height: auto;
-    border-radius: 0;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, .24), 0 0 2px rgba(0, 0, 0, .12);
-    .panel-heading {
-        padding: 25px 15px;
+  max-height: auto;
+  border-radius: 0;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .24), 0 0 2px rgba(0, 0, 0, .12);
+  .panel-heading {
+    padding: 25px 15px;
+  }
+  .panel-body {
+    padding-bottom: 25px;
+  }
+  .panel-footer {
+    overflow: hidden;
+  }
+}
+
+.choice, .choice .icon {
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.choice {
+  input[type='radio'], input[type='checkbox'] {
+    position: absolute;
+    left: -10000px;
+    z-index: -1;
+  }
+  .icon {
+    height: 116px;
+    width: 116px;
+    border-radius: 50%;
+    color: #000;
+    margin: 0 auto 20px;
+    border: 6px solid #CCCCCC;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+  }
+  .cp-account-icon {
+    font-size: 30px;
+    line-height: 111px;
+  }
+  &.active {
+    .icon {
+      color: rgb(20, 144, 97);
+      border-color: rgb(20, 144, 97);
     }
-    .panel-body {
-        padding-bottom: 25px;
+  }
+  &:hover {
+    .icon {
+      color: #ff9500;
+      border-color: #ff9500;
     }
-    .panel-footer {
-        overflow: hidden;
+  }
+}
+
+.cp-wizard-top {
+  .horizontal {
+    .steps-indicator {
+      li:not(.current) {
+        &:after {
+          background-color: #d2d2d2 !important;
+        }
+      }
+      li {
+        &:before {
+          height: 5px;
+          border: 2px solid;
+        }
+      }
+      li.current {
+        &:after {
+          color: #fff !important;
+          background-color: #ff9e26 !important;
+        }
+      }
+      li.editing, li.default, li.current {
+        &:before {
+          border-color: #d2d2d2;
+        }
+      }
+      li.done {
+        &:after {
+          color: #fff !important;
+        }
+        &:before, &:after {
+          @include wizard-steps(rgb(20, 144, 97));
+        }
+      }
+      li.editing {
+        &:after {
+          color: #fff !important;
+          @include wizard-steps(rgb(20, 144, 97));
+        }
+      }
     }
+  }
+}
+
+.cp-wiz-image-wrapper {
+    border: 1px dashed #ccc;
+    padding: 25px;
+    overflow: hidden;
+}
+
+.cp-wiz-upload {
+    padding-top: 25px;
 }

@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {
-    MdCardModule
+    MdIconModule
+  , MdCardModule
   , MdTabsModule
   , MdRadioModule
   , MdInputModule
@@ -16,6 +17,7 @@ import {
 } from '@angular/material';
 
 const MODULES: any[] = [
+    MdIconModule,
     MdCardModule,
     MdTabsModule,
     MdRadioModule,
