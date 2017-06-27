@@ -35,4 +35,8 @@ export class HomeComponent {
         this.file = files[0];
         console.log(this.file);
     }
+
+    createCanvas(): void {
+        
+    }
 }

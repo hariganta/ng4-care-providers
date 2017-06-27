@@ -1,1 +1,127 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'bs-old/bootstrap';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.wizard-steps {
+  display: block !important;
+}
+
+// customized buttons
+.cp-btn-circle {
+  @extend .btn !optional;
+  padding: 12px 18px;
+  border-radius: 100px;
+  border: 1px solid transparent;
+}
+
+.cp-btn-circle:hover,
+.cp-btn-circle:focus,
+.cp-btn-circle.active.focus,
+.cp-btn-circle.active:focus,
+.cp-btn-circle.active:hover,
+.cp-btn-circle:active.focus,
+.cp-btn-circle:active:focus,
+.cp-btn-circle:active:hover {
+  color: #333;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+  background-image: none;
+  outline: 0;
+  //outline: 5px auto -webkit-focus-ring-color;
+  //outline-offset: -2px;
+}
+
+.cp-btn-circle-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  @extend .cp-btn-circle;
+}
+
+.mat-radio-label {
+  float: left !important;
+}
+
+.mat-radio-button {
+  .mat-radio-label-content {
+    .control-label {
+      font-weight: normal;
+    }
+  }
+}
+
+.mat-input-container {
+  width: 100%;
+}
+
+.mat-input-placeholder {
+  font-weight: normal;
+}
+
+.mat-select {
+  display: block !important;
+  position: relative;
+  top: 5px;
+}
+
+.mat-fab, .mat-mini-fab {
+  color: rgba(0, 0, 0, .87);
+  background-color: #fff;
+}
+
+// tooltips
+.tooltip.show {
+  opacity: 1;
+}
+
+.tooltip-inner {
+  padding: 5px 12px;
+  background-color: rgb(20, 144, 97);
+}
+
+.tooltip.bs-tether-element-attached-bottom 
+.tooltip-inner::before,
+.tooltip.tooltip-top .tooltip-inner::before {
+  border-top-color: rgb(20, 144, 97);
+}
+
+// global styles
+.cp-separator {
+  padding-bottom: 10px;
+  border-bottom: 1px dashed rgba(221, 221, 221, 0.53);
+}
+
+.cp-bold {
+  font-weight: bold;
+}
+
+.cp-form-group-spacer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.cp-no-margin {
+  margin: 0 !important;
+}
+
+.cp-center {
+  margin: 0 auto;
+}
+
+.cp-overflow-hidden {
+  overflow: hidden;
+}
+
+.cp-wiz-tooltip * {
+  display: inline-block;
+  white-space: nowrap !important;
+}
+
+.cp-btn-red {
+  background-color: rgba(255, 0, 0, 0.8);
+
+  &, &:hover {
+    color: white;
+  }
+}
